@@ -19,6 +19,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.image = NSImage(named: "StatusBarButtonImage")
             button.action = Selector("printQuote")
         }
+        
+        let menu = NSMenu()
+        
+        menu.addItem(NSMenuItem(title: "Print Quote", action: Selector("printQuote"), keyEquivalent: "P"))
+        menu.addItem(NSMenuItem.separatorItem())
+        menu.addItem(NSMenuItem(title: "Quit Quotes", action: Selector("terminate"), keyEquivalent: "q"))
+        
+        statusItem.menu = menu
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
