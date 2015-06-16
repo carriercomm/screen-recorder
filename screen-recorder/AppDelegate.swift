@@ -24,6 +24,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
     }
+    
+    // Here
+    func printQuote(sender: AnyObject) {
+        let quoteText = "Testing the text dawg"
+        let quoteAuthor = "Ben"
+        
+        println("\(quoteText) - \(quoteAuthor)")
+    }
 
 
 }
